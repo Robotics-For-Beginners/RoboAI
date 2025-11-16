@@ -1,0 +1,58 @@
+{
+    "robot": {
+        "name": "LlamaBot",
+        "type": "wheeled_robot",
+        "version": "1.0"
+    },
+    
+    "ai": {
+        "model": "tinyllama",
+        "temperature": 0.7,
+        "max_tokens": 150
+    },
+    
+    "hardware": {
+        "board": "raspberry_pi",
+        "motor_driver": "l298n",
+        
+        "motor_pins": {
+            "left_forward": 17,
+            "left_backward": 18, 
+            "right_forward": 22,
+            "right_backward": 23
+        },
+        
+        "camera": {
+            "index": 0,
+            "width": 640,
+            "height": 480,
+            "fps": 30
+        },
+        
+        "sensors": {
+            "ultrasonic_trigger": 24,
+            "ultrasonic_echo": 25,
+            "led_status": 4
+        }
+    },
+    
+    "voice": {
+        "enabled": true,
+        "listen_timeout": 5,
+        "speech_speed": 150,
+        "speech_volume": 0.8
+    },
+    
+    "behavior": {
+        "auto_start": true,
+        "safe_mode": true,
+        "max_speed": 80,
+        "log_level": "info"
+    },
+    
+    "user": {
+        "preferred_language": "english",
+        "voice_commands_enabled": true,
+        "auto_update": false
+    }
+    } 
